@@ -1,17 +1,20 @@
 #!/bin/bash
 
-# NOT the catfetch!! 
-# don't change if you want it to work :>
+# NOT the catfetch!!
+# by tasory ( github.com/tasory )
 
 # main varibles
 kr=$(uname -r)
 wm=${XDG_CURRENT_DESKTOP:-"not detected :<"}
-#du=$(uptime -p)
-up=${du:2}
-#dp=$(lscpu | grep "Model name:")
-#cp=${dp:14}
 hn=$(hostname)
 mu=$(playerctl metadata --format "{{artist}} - {{title}}" 2>/dev/null || echo "not playing")
+
+# this options is used in catfeth-ts
+# you can try to add it to fetch and customize fetch
+#du=$(uptime -p) 			# don't use it, it displays 'up 9 hours 29 minutes' (time is random) 
+#up=${du:2} 				# this is uptime, just time, without up 
+#dp=$(lscpu | grep "Model name:") 	# don't use it, it displays long string with information unnecessary for fetch
+#cp=${dp:14}				# This is cpu name
 
 # colors
 white="\e[97m"
